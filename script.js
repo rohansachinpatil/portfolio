@@ -21,38 +21,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ─── 2. CUSTOM CURSOR ───────────────────────────────────────────────────────
+    const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
     const cursor = document.querySelector('.cursor');
     const cursorDot = document.querySelector('.cursor-dot');
-    let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top = mouseY + 'px';
-    });
+    if (!isTouchDevice && cursor && cursorDot) {
+        let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0;
 
-    // Lagging dot for trail effect
-    function animateDot() {
-        dotX += (mouseX - dotX) * 0.15;
-        dotY += (mouseY - dotY) * 0.15;
-        if (cursorDot) {
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        // Lagging dot for trail effect
+        function animateDot() {
+            dotX += (mouseX - dotX) * 0.15;
+            dotY += (mouseY - dotY) * 0.15;
             cursorDot.style.left = dotX + 'px';
             cursorDot.style.top = dotY + 'px';
+            requestAnimationFrame(animateDot);
         }
-        requestAnimationFrame(animateDot);
+        animateDot();
+
+        const hoverElements = document.querySelectorAll('a, button, .project-item, input, .skill-card, .exp-item, .social-link');
+        hoverElements.forEach(elem => {
+            elem.addEventListener('mouseenter', () => cursor.classList.add('hover-effect'));
+            elem.addEventListener('mouseleave', () => cursor.classList.remove('hover-effect'));
+        });
+
+        // Hide cursor when leaving window
+        document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
+        document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
     }
-    animateDot();
-
-    const hoverElements = document.querySelectorAll('a, button, .project-item, input, .skill-card, .exp-item, .social-link');
-    hoverElements.forEach(elem => {
-        elem.addEventListener('mouseenter', () => cursor.classList.add('hover-effect'));
-        elem.addEventListener('mouseleave', () => cursor.classList.remove('hover-effect'));
-    });
-
-    // Hide cursor when leaving window
-    document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
-    document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
 
 
     // ─── 3. SCROLL REVEAL ───────────────────────────────────────────────────────
