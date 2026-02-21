@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Patil | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-progress"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div id="preloader-counter">0%</div>
+        <div class="preloader-label">Loading portfolio</div>
+        <div class="preloader-bar-track">
+            <div class="preloader-bar-fill" id="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- CURSORS -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+        <div class="logo">ROHAN</div>
+        <div class="nav-links">
+            <a href="#home" class="active">HOME</a>
+            <a href="#projects">PORTFOLIO</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="reveal-text">
+                        It's <span class="highlight scramble-text">Rohan</span><br>isn't it?
+                    </h1>
+                    <p class="subtitle reveal-text">Aspiring entrepreneur, UI/UX designer, &amp; tech enthusiast building things that matter.</p>
+                    <div class="social-icons reveal-element">
+                        <a href="https://www.linkedin.com/in/rohansaschinpatil" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="social-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-link" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="mailto:rohanspatil801@gmail.com" class="social-link" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-photo reveal-element">
+                    <div class="photo-ring">
+                        <div class="photo-ring-inner">
+                            <!-- Replace src with your actual photo -->
+                            <img src="Group 17.svg" alt="Rohan Patil" class="profile-photo">
+                        </div>
+                    </div>
+                    <div class="photo-badge">AIR 1 @ NEC '25 🏆</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── ABOUT / METHOD ─────────────────────────────────────────────────── -->
+        <section id="about" class="method-section">
+            <h2 class="reveal-text">Thinking isn't linear.<br>Our method is.</h2>
+            <div class="timeline reveal-element">
+                <div class="timeline-point">
+                    <div class="timeline-dot"></div>
+                    <h3>Design</h3>
+                    <p>UI/UX, Spatial UI,<br>&amp; 3D Rendering</p>
+                </div>
+                <div class="timeline-line"></div>
+                <div class="timeline-point">
+                    <div class="timeline-dot"></div>
+                    <h3>Develop</h3>
+                    <p>Python, JS, AI<br>&amp; Prompt Engineering</p>
+                </div>
+                <div class="timeline-line"></div>
+                <div class="timeline-point">
+                    <div class="timeline-dot"></div>
+                    <h3>Lead</h3>
+                    <p>E-Cell MET &amp;<br>CleanTrail Founder</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
+        <section class="skills-section">
+            <h2 class="reveal-text">Skills come in many shapes.<br>I've got them all.</h2>
+            <div class="card-container">
+                <div class="skill-card purple reveal-element">
+                    <h3>Design &amp; UI/UX</h3>
+                    <p>Figma, Blender, Spatial UI, Creative Content Creation, 3D Rendering</p>
+                    <span class="skill-tag">Figma · Blender</span>
+                </div>
+                <div class="skill-card blue reveal-element">
+                    <h3>AI &amp; Code</h3>
+                    <p>Python, JavaScript, HTML/CSS, Prompt Engineering, LLMs, OpenCV, MediaPipe</p>
+                    <span class="skill-tag">Python · JS · AI</span>
+                </div>
+                <div class="skill-card green reveal-element">
+                    <h3>Leadership</h3>
+                    <p>Campus Ambassador (IIT Bombay Techfest &amp; E-Cell), Marketing Lead, Startup Founder</p>
+                    <span class="skill-tag">E-Cell · CleanTrail</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
+        <section id="projects" class="projects-section">
+            <h2 class="reveal-text">I let the work<br>do the talking.</h2>
+            <p class="gallery-hint reveal-element">Scroll or drag to explore →</p>
+            <div class="project-gallery reveal-element">
+
+                <div class="project-item">
+                    <div class="project-placeholder">🖐️</div>
+                    <div class="project-info">Hand Gesture Racing (Python / OpenCV)</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-placeholder">🍩</div>
+                    <div class="project-info">3D Donut Project (Blender)</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-placeholder">🎵</div>
+                    <div class="project-info">ORBIT Music App (Figma)</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-placeholder">✨</div>
+                    <div class="project-info">X App Spatial UI Concept (Figma)</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-placeholder">🌍</div>
+                    <div class="project-info">Orbit Travel Companion (Figma)</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── EXPERIENCE ─────────────────────────────────────────────────────── -->
+        <section class="experience-section">
+            <h2 class="reveal-text">Experience.</h2>
+            <div class="exp-list reveal-element">
+
+                <div class="exp-item">
+                    <div>
+                        <h3>Campus Ambassador</h3>
+                        <div class="exp-detail">Selected as official representative for Asia's largest Science &amp; Technology festival — promoting tech events, competitions, and workshops across campus.</div>
+                    </div>
+                    <span>Techfest, IIT Bombay · Jul 2025 – Present</span>
+                    <div class="exp-toggle">+</div>
+                </div>
+
+                <div class="exp-item">
+                    <div>
+                        <h3>Founder &amp; Lead</h3>
+                        <div class="exp-detail">CleanTrail: eco-initiative fostering clean environments in Nashik &amp; Pune. CTRL+Byte Productions: AI-generated tech podcast live on Spotify educating youth on emerging tech.</div>
+                    </div>
+                    <span>CleanTrail &amp; CTRL+Byte · Jan 2025 – Present</span>
+                    <div class="exp-toggle">+</div>
+                </div>
+
+                <div class="exp-item">
+                    <div>
+                        <h3>Marketing Lead</h3>
+                        <div class="exp-detail">Spearheaded digital marketing campaigns, assisted in organizing startup culture workshops, and secured AIR 1 at NEC 2025 representing MET at IIT Bombay E-Summit.</div>
+                    </div>
+                    <span>E-Cell MET · Nov 2024 – Present</span>
+                    <div class="exp-toggle">+</div>
+                </div>
+
+                <div class="exp-item">
+                    <div>
+                        <h3>Open Source Contributor</h3>
+                        <div class="exp-detail">Contributed to Google DeepMind Gemma, Mozilla Firefox Relay, and OpenClaw. Improved Python pipelines, WCAG accessibility, and CLI tooling across 3 active PRs.</div>
+                    </div>
+                    <span>Google DeepMind · Mozilla · Feb 2026</span>
+                    <div class="exp-toggle">+</div>
+                </div>
+
+                <div class="exp-item">
+                    <div>
+                        <h3>🏆 Winner — AIR 1</h3>
+                        <div class="exp-detail">Secured All India Rank 1 at the National Entrepreneurship Challenge hosted by E-Cell, IIT Bombay E-Summit 2025 — ₹90,000 prize.</div>
+                    </div>
+                    <span>NEC '25 — IIT Bombay</span>
+                    <div class="exp-toggle">+</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── CONTACT ────────────────────────────────────────────────────────── -->
+        <section id="contact" class="contact-section">
+            <h1 class="reveal-text">or just<br><span>one click</span> away.</h1>
+            <div class="contact-form reveal-element">
+                <div class="inputs">
+                    <input type="text" placeholder="NAME">
+                    <input type="email" placeholder="MAIL">
+                </div>
+                <div class="message-area">
+                    <input type="text" placeholder="MESSAGE">
+                    <button class="send-btn" title="Send">➔</button>
+                </div>
+            </div>
+            <div class="contact-card reveal-element">
+                <h3>Rohan Sachin Patil</h3>
+                <p>📍 Nashik, Maharashtra, 422003</p>
+                <p>📞 +91 7020672694</p>
+                <p>✉️ rohanspatil801@gmail.com</p>
+                <p>🔗 linkedin.com/in/rohansaschinpatil</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>© 2026 <strong>Rohan Sachin Patil</strong>. Built with code &amp; curiosity.</span>
+        <span>Nashik, Maharashtra 🇮🇳</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
